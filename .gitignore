@@ -1,0 +1,5 @@
+build/*
+crosstool-ng
+bin
+share
+lib
