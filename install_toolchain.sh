@@ -152,7 +152,7 @@ if echo "$1" | grep -q "[^-_a-z]"; then
     echo "That's obviously not a valid target name."
     echo "Run \"install_toolchain.sh --targets\" to see the list of targets."
     exit 1
-elif [ $1 = "targets" -o ! -f config/$1.cfg ]; then
+elif [ "$1" = "targets" -o ! -f config/$1.cfg ]; then
     cat <<EOF
 
 Known targets:
@@ -164,7 +164,7 @@ arm-openarms-eabi
   OpenARMs architecture. (always Little-Endian)
 
 EOF
-elif [ -z $1 ]; then
+elif [ -z "$1" ]; then
     cat <<EOF
 
 Usage: install-toolchain.sh <target>
@@ -180,7 +180,7 @@ Once the compilation is complete, the build files will be deleted, and the
 toolchain will likely be around 200 megabytes.
 
 EOF
-    if [ -z $1 ]; then
+    if [ -z "$1" ]; then
         exit 0
     else
         exit 1
