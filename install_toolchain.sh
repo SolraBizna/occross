@@ -164,6 +164,7 @@ arm-openarms-eabi
   OpenARMs architecture. (always Little-Endian)
 
 EOF
+    exit 0
 elif [ -z "$1" ]; then
     cat <<EOF
 
