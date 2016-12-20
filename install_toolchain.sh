@@ -58,7 +58,7 @@ Homebrew via:"; echo "brew install wget"; exit 1)
 fi
 
 for tool in git make c++ gperf help2man flex bison wget autoconf makeinfo \
-                libtool; do
+                libtool python3 automake; do
     which $tool > /dev/null \
     || (echo "Couldn't find $tool. Install it and/or add it to your PATH and \
 try again."; exit 1)
